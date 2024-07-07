@@ -1,6 +1,9 @@
-from crewai import Crew
+from dotenv import load_dotenv
+from crewai import Crew, Process
 from agents import Agents
 from tasks import Tasks
+
+load_dotenv()
 
 
 class TheCrew:
@@ -33,6 +36,15 @@ class TheCrew:
                     technical_writer, gtm_director, summarizer_agent],
             tasks=[research_task, social_media_writer_task,
                    technical_writer_task, gtm_task, summarize_task],
+            embedder={
+                "provider": "cohere",
+                "config": {
+                    "model": "embed-english-v3.0",
+                    "vector_dimension": 1024,
+                }
+            },
+            verbose=True,
+            process=Process.sequential,
         )
 
         # Start the crew's work

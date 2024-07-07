@@ -26,7 +26,7 @@ class Tasks():
                 Write it in a way that is attention-grabbing and informative.
 
                 """),
-            expected_output="A json object with the following format: {\"research_summary\": \"less than 400 word summary of reearch\"}",
+            expected_output='json format: {"research_summary": "less than 400 word summary of reearch"}',
             agent=agent
         )
 
@@ -43,7 +43,7 @@ class Tasks():
                 Most importantly, this plan should include a detailed analysis of the target audience and the most effective channels to reach them.
 
                 """),
-            expected_output="A json object with the following format: {\"target_audience\": \"less than 200 word description of target audience\", \"channels\": [\"most important channel\", \"second most important channel\", \"third most important channel\"]}",
+            expected_output='json format: {"target_audience": "less than 200 word description of target audience", "channels": ["most important channel", "second most important channel", "third most important channel"]}',
             agent=agent
         )
 
@@ -72,7 +72,7 @@ class Tasks():
                 - In a world where tech giants like Tesla and SpaceX are revolutionizing industries with innovative designs and rigorous testing, why can't Boeing do the same? The answer lies in their outdated business model – they're more concerned with protecting their bottom line than investing in research and development. It's time for a reboot.
 
                 """),
-            expected_output="A json object with the following format: {\"hot_takes\": [\"hot_take1\", \"hot_take2\", \"hot_take3\", \"hot_take4\", \"hot_take5\"]}",
+            expected_output='json format: {"hot_takes": ["hot_take1", "hot_take2", "hot_take3", "hot_take4", "hot_take5"]}',
             agent=agent
         )
 
@@ -82,6 +82,6 @@ class Tasks():
                 f"""
                 Combine the outputs from the technical writer, social media writer, and gtm director.
                 """),
-            expected_output="The research summary from the technical writer, the hot takes from the social media writer, and the data from the gtm director combined into a single json object. Use the following json format: {\"research_summary\": \"less than 400 word summary of reearch\", \"hot_takes\": [\"hot_take1\", \"hot_take2\", \"hot_take3\", \"hot_take4\", \"hot_take5\"], \"target_audience\": \"less than 400 word descriptino of target audience\", \"channels\": [\"most important channel\", \"second most important channel\", \"third most important channel\"]}",
+            expected_output='json format: {"research_summary": "less than 400 word summary of reearch", "hot_takes": ["hot_take1", "hot_take2", "hot_take3", "hot_take4", "hot_take5"], "target_audience": "less than 400 word descriptino of target audience", "channels": ["most important channel", "second most important channel", "third most important channel"]}',
             agent=agent
         )
