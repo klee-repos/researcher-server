@@ -1,0 +1,50 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Poetry's virtual environments
+.poetry/
+
+# Ignore build directories
+build/
+dist/
+*.egg-info
+
+# Ignore environment variables
+.env
+.env.*
+
+# Ignore any IDE/editor specific files
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore mypy cache
+.mypy_cache/
+
+# Ignore FastAPI specific files
+*.db
+
+# crewai
+*.pkl

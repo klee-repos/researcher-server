@@ -1,0 +1,36 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Poetry's virtual environments
+.poetry/
+
+# Ignore build directories
+build/
+dist/
+*.egg-info
+
+# Ignore environment variables
+.env
+.env.*
+
+# Ignore any IDE/editor specific files
+.vscode/
+.idea/
+
+# Ignore Docker related files
+Dockerfile
+docker-compose.yml
+
+# Ignore test related files
+tests/
+
+# Ignore logs
+*.log
+
+# crewai
+*.pkl
