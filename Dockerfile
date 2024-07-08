@@ -12,7 +12,7 @@ RUN pip install poetry
 
 # Install dependencies
 RUN poetry config virtualenvs.create false
-RUN poetry install --only main
+RUN poetry install --only main --no-root
 
 # Copy the rest of the application code to the container
 COPY . .
@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to run the FastAPI application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
